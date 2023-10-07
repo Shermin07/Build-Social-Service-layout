@@ -9,7 +9,7 @@ import ServiceCards from '../ServiceCards/ServiceCards';
 const Service = () => {
 
    const services = useLoaderData([]);
-   console.log(services);
+   //console.log(services);
 
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-4'>

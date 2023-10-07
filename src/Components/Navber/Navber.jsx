@@ -1,5 +1,6 @@
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
+import Marquee from "react-fast-marquee";
 
 const Navber = () => {
 
@@ -41,9 +42,18 @@ const Navber = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    
+  <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+        <div className="w-10 rounded-full">
+          <img src="" />
+        </div>
+      </label>
+    <Link to='/login'>
+    <button className="btn btn-primary">Login</button>
+    </Link>
   </div>
 </div>
+
+   <Marquee pauseOnHover = {true} speed={60} className="mb-3">Celebrating life's moments, one event at a time.Where memories are made, laughter is shared, and joy finds its place.</Marquee>
         </div>
     );
 };
