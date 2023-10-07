@@ -1,9 +1,23 @@
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
 
+    const {signIn} = useContext(AuthContext) ;
+    const [loginError, setLoginError] = useState('') ;
+    const [loginSuccess, setLoginSuccess] = useState('') ;
+    
+    
+
     const handleLogin = e =>{
+
+        setLoginSuccess('');
+        setLoginError('');
         e.preventDefault();
 
         const  name = e.target.name.value ;
@@ -11,6 +25,16 @@ const Login = () => {
         const password = e.target.password.value ;
 
         console.log(name, email, password)
+
+     signIn(email, password)
+     .then(result =>{
+        console.log(result.user);
+        toast("User login successfully!")
+     })
+     .catch(error =>{
+        toast(error.message)
+     }) ;
+
     } ;
 
     return (
@@ -48,12 +72,21 @@ const Login = () => {
           <button className="btn btn-primary">Login</button>
         </div>
       </form>
+    
 
       <p className="ml-7 mb-4">Don't have an account? Please 
         <Link to='/register' className="text-blue-600 ml-2 font-bold"> Register</Link>
       </p>
+     <div>
+    
+     <Link><button  className="btn btn-primary mb-4 ml-7">Login with Google</button></Link>
+     </div>
+     <ToastContainer />
     </div>
+    
+
   </div>
+ 
 </div>
         </div>
     );

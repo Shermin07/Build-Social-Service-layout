@@ -1,14 +1,45 @@
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
 
+    const {createUser} = useContext(AuthContext);
+
+    const [registerError, setRegisterError] = useState('') ;
+
+    const [registerSuccess, setRegisterSuccess] = useState('') ;
+
      const handleRegister = e =>{
+
+      setRegisterError('');
+      setRegisterSuccess('');
+
+        e.preventDefault();
         const  name = e.target.name.value ;
         const email = e.target.email.value ;
         const password = e.target.password.value ;
 
         console.log(name, email, password)
+
+        if(password < 6 || !/[A-Z]/.test(password) || !/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)){
+            toast('Password should be charecters and one upper letter and a special cherecter')
+        }
+
+        createUser(email, password)
+        .then(result =>{
+            console.log(result.user)
+           
+            toast("User registered successfully!")
+
+        })
+        .catch(error =>{
+            console.error(error)
+           
+        })
      }
 
     return (
@@ -43,13 +74,22 @@ const Register = () => {
       </label>
     </div>
     <div className="form-control mt-6">
-      <button className="btn btn-accent">Login</button>
+      <button className="btn btn-accent">Register</button>
     </div>
   </form>
+  {
+    registerError && <p className="ml-7 text-red-400 mb-3">{registerError}</p>
+    
+  }
+  {
+    registerSuccess && <p className="ml-7 text-green-700 mb-3">{registerSuccess}</p>
+  }
+
 
   <p className="ml-7 mb-4">Already have an account? Please 
     <Link to='/login' className="text-teal-500 ml-2 font-bold"> Login</Link>
   </p>
+  <ToastContainer />
 </div>
 </div>
 </div>

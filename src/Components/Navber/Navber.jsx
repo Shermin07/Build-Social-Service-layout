@@ -1,8 +1,23 @@
 import { Link, NavLink } from "react-router-dom"
 
 import Marquee from "react-fast-marquee";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navber = () => {
+
+   const {user,logOut} = useContext(AuthContext) ;
+
+   const handleSignOut = () =>{
+    logOut()
+    .then(result =>{
+      console.log(result.user)
+    })
+    .catch(error =>{
+      console.error(error)
+    })
+   }
+
 
 
     const navLinks = <>
@@ -47,9 +62,14 @@ const Navber = () => {
           <img src="" />
         </div>
       </label>
+   {
+    user?
+    <button onClick={handleSignOut} className="btn btn-primary">Sign Out</button>
+    :
     <Link to='/login'>
-    <button className="btn btn-primary">Login</button>
+   <button className="btn btn-primary">Login</button>
     </Link>
+   }
   </div>
 </div>
 
