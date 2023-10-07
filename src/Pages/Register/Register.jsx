@@ -5,6 +5,8 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { AiFillEyeInvisible,  AiFillEye} from 'react-icons/ai'
+
 const Register = () => {
 
     const {createUser} = useContext(AuthContext);
@@ -12,6 +14,7 @@ const Register = () => {
     const [registerError, setRegisterError] = useState('') ;
 
     const [registerSuccess, setRegisterSuccess] = useState('') ;
+    const [showPassword, setShowPassword] = useState(false) ;
 
      const handleRegister = e =>{
 
@@ -26,7 +29,7 @@ const Register = () => {
         console.log(name, email, password)
 
         if(password < 6 || !/[A-Z]/.test(password) || !/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)){
-            toast('Password should be charecters and one upper letter and a special cherecter')
+            toast('Password should be more than 6 charecters and one upper letter and a special cherecter')
         }
 
         createUser(email, password)
@@ -64,11 +67,18 @@ const Register = () => {
       </label>
       <input type="email" placeholder="email" name="email" className="input input-bordered" required />
     </div>
-    <div className="form-control">
+    <div className="form-control relative">
       <label className="label">
         <span className="label-text">Password</span>
       </label>
-      <input type="password" placeholder="password" name="password" className="input input-bordered" required />
+      <input  type={showPassword ? 'text' :'password'} placeholder="password" name="password" className="input input-bordered " required />
+
+      <span className="absolute  mt-[51px] ml-[410px]" onClick={ () => setShowPassword(!showPassword)}>
+      {
+       showPassword?<AiFillEye></AiFillEye> : <AiFillEyeInvisible></AiFillEyeInvisible>  } 
+      </span>
+      
+      
       <label className="label">
         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
       </label>

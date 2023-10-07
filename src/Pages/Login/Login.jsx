@@ -4,6 +4,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { AiFillEyeInvisible,  AiFillEye} from 'react-icons/ai'
 
 
 const Login = () => {
@@ -11,6 +12,7 @@ const Login = () => {
     const {signIn} = useContext(AuthContext) ;
     const [loginError, setLoginError] = useState('') ;
     const [loginSuccess, setLoginSuccess] = useState('') ;
+    const [showPassword, setShowPassword] = useState(false) ;
     
     
 
@@ -24,7 +26,11 @@ const Login = () => {
         const email = e.target.email.value ;
         const password = e.target.password.value ;
 
-        console.log(name, email, password)
+        console.log(name, email, password) ;
+
+        if(password < 6 || !/[A-Z]/.test(password) || !/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)){
+            toast('Password should be more than 6 charecters and one upper letter and a special cherecter')
+        }
 
      signIn(email, password)
      .then(result =>{
@@ -32,7 +38,7 @@ const Login = () => {
         toast("User login successfully!")
      })
      .catch(error =>{
-        toast(error.message)
+        toast(error)
      }) ;
 
     } ;
@@ -63,7 +69,16 @@ const Login = () => {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" placeholder="password" name="password" className="input input-bordered" required />
+          <input  type={showPassword ? 'text' :'password'} placeholder="password" name="password" className="input input-bordered " required />
+
+      <span className="absolute  mt-[51px] ml-[410px]" onClick={ () => setShowPassword(!showPassword)}>
+      {
+       showPassword?<AiFillEye></AiFillEye> : <AiFillEyeInvisible></AiFillEyeInvisible>  } 
+      </span>
+
+
+
+
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
@@ -79,7 +94,7 @@ const Login = () => {
       </p>
      <div>
     
-     <Link><button  className="btn btn-primary mb-4 ml-7">Login with Google</button></Link>
+     <Link><button  className="btn btn-primary mb-4 ml-7">Login with Github</button></Link>
      </div>
      <ToastContainer />
     </div>
