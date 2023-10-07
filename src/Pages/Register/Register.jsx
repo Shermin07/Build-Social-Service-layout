@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { AiFillEyeInvisible,  AiFillEye} from 'react-icons/ai'
+import { sendEmailVerification } from "firebase/auth";
 
 const Register = () => {
 
@@ -37,6 +38,12 @@ const Register = () => {
             console.log(result.user)
            
             toast("User registered successfully!")
+            sendEmailVerification(result.user)
+            .then(() =>{
+                toast('Please check your email and verify your account')
+            })
+            
+            
 
         })
         .catch(error =>{
@@ -79,9 +86,7 @@ const Register = () => {
       </span>
       
       
-      <label className="label">
-        <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-      </label>
+     
     </div>
     <div className="form-control mt-6">
       <button className="btn btn-accent">Register</button>

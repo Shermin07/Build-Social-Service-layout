@@ -6,8 +6,11 @@
         "title_color" : " rgb(190 18 60)",
         "price_color" : "rgb(190 18 60)",
         "price": "$10,000",
+       
         
-        "description": "A luxurious and elegant wedding event in a beautiful venue with top-notch services."
+        "description": "A luxurious and elegant wedding event in a beautiful venue with top-notch services.",
+
+        "description_details" : "Love is the most beautiful and profound force in the universe, and a wedding celebration is the grand stage where two hearts embark on a lifelong journey together. It's a day to cherish not just the union of two souls but the power of love itself. As you plan your wedding celebration, remember that it's not just about the details, the flowers, or the venue. It's about the love story you're creating, a story that will inspire others to believe in the magic of love. May your love story be the source of inspiration for others, a reminder that love conquers all. So, dream big, love deeply, and celebrate your wedding with all the passion in your hearts. Your journey has just begun, and it's going to be a beautiful adventure filled with love, laughter, and cherished moments."
       },
       {
         "id": 2,
@@ -16,7 +19,12 @@
         "title_color" : " rgb(67 56 202)",
         "price_color" : " rgb(67 56 202)",
         "price": "$500",
-        "description": "A lively and fun birthday party with games, decorations, and a delicious cake."
+        "description": "A lively and fun birthday party with games, decorations, and a delicious cake.",
+
+        "description_details" :"Another year, another journey around the sun! Your birthday isn't just a reminder of getting older; it's a celebration of the incredible person you've become. Each passing year is a chapter in the book of your life, and today, you're writing a new one.As you blow out the candles, make a wish not just for yourself but for the beautiful adventures that lie ahead. Birthdays are a chance to reflect on your dreams and set new goals, to remind yourself that you are capable of achieving anything.So, on this special day, embrace the joy, soak in the love, and let your heart be filled with gratitude. Your birthday celebration is a reminder that you are a gift to the world, and your journey is far from over. Here's to another year of amazing adventures and beautiful memories!"
+        
+        
+        
       },
       {
         "id": 3,
@@ -25,7 +33,11 @@
         "title_color" : " rgb(239 68 68)",
         "price_color" : " rgb(239 68 68)",
         "price": "$2,000",
-        "description": "A celebration for your wedding anniversary with music, dance, and gourmet dining."
+        "description": "A celebration for your wedding anniversary with music, dance, and gourmet dining.",
+
+        "description_details" :"Anniversaries are not just a reminder of time passed; they are a celebration of the enduring love that continues to grow with each passing year. As you mark this special day, take a moment to reflect on the beautiful journey you've embarked upon together. Your anniversary is a testament to the commitment, love, and partnership that have sustained your relationship. It's a reminder of the promises made and the memories created, and it signifies the strength of your bond. May your anniversary be a reminder of the love that brought you together and the love that continues to grow stronger. Here's to many more years of adventures, laughter, and cherished moments. Your journey together is a source of inspiration to us all, a reminder that love knows no bounds and that true love is worth celebrating."
+
+
       },
       {
         "id": 4,
@@ -34,7 +46,9 @@
         "title_color" : " rgb(162 28 175)",
         "price_color" : " rgb(162 28 175)",
         "price": "$800",
-        "description": "A heartfelt retirement party with speeches, gifts, and a grand farewell."
+        "description": "A heartfelt retirement party with speeches, gifts, and a grand farewell.",
+
+        "description_details" : "As you embark on this new chapter of your life called 'retirement,' remember that it's not the end of the road but a fresh beginning of a new journey. It's a time to bid farewell to the daily grind and say hello to a world of possibilities. Retirement is your reward for years of hard work, dedication, and perseverance. It's your chance to reclaim your time, rediscover your passions, and redefine your purpose. The best part is, you have the freedom to write your own story.So, don't view retirement as the end of something great; see it as the beginning of something even greater. You have the wisdom, experience, and freedom to make the most of this beautiful phase. Your retirement years are an adventure waiting to unfold, and the best is yet to come."
       },
       {
         "id": 5,
@@ -43,7 +57,9 @@
         "title_color" : " rgb(236 72 153)",
         "price_color" : "rgb(236 72 153)",
         "price": "$300",
-        "description": "A joyful baby shower event with cute decorations to welcome the new arrival."
+        "description": "A joyful baby shower event with cute decorations to welcome the new arrival.",
+
+        "description_details" : "Today, we gather to celebrate not just the impending arrival of a precious little one but also the immense joy and love that surrounds this beautiful moment. A baby shower is a celebration of hope, new beginnings, and the extraordinary gift of life. As you prepare to welcome your little bundle of joy, remember that you are embarking on a journey filled with wonder, laughter, and endless love. Parenthood is a remarkable adventure, and your baby shower is just the beginning. Congratulations on this beautiful occasion, and may your baby shower be the start of a lifetime filled with love, laughter, and endless blessings."
       },
       {
         "id": 6,
@@ -52,7 +68,9 @@
         "title_color" : " rgb(15 118 110)",
         "price_color" : "rgb(15 118 110)",
         "price": "$400",
-        "description": "A celebratory gathering to honor the graduate's achievements with friends and family."
+        "description": "A celebratory gathering to honor the graduate's achievements with friends and family.",
+
+        "description_details" : "Graduation is not just the end of one chapter; it's the beginning of an exciting new adventure. As you stand on the threshold of this next phase in your life, know that the world is yours to conquer. Your hard work, determination, and dedication have brought you to this moment, and your graduation is a testament to your ability to overcome challenges and achieve your goals. It's a celebration of your knowledge, your growth, and your limitless potential.Congratulations on your graduation! You have the knowledge, the skills, and the determination to make a difference in the world. Your future is bright, and the world is ready for the impact you'll make."
       }
     ]
   

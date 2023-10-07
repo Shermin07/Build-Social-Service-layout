@@ -24,6 +24,7 @@ const Navber = () => {
 
 
         <li className="ml-3 text-lg"> <NavLink to='/' className='text-blue-700 font-semibold '> Home </NavLink></li>
+        <li className="ml-3 text-lg"> <NavLink to='/aboutUs' className='text-blue-700 font-semibold '> About Us </NavLink></li>
     
         <li className="ml-3 text-lg"> <NavLink to='/login' className='text-blue-700 font-semibold'> Login </NavLink> </li>
         <li className="ml-3 text-lg"> <NavLink to='/register' className='text-blue-700 font-semibold'> Register </NavLink> </li>
@@ -34,7 +35,7 @@ const Navber = () => {
 
 
     return (
-        <div>
+        <div className="max-w-screen-xl mx-auto">
          <div className="navbar bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">

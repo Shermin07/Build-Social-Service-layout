@@ -1,10 +1,12 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../Provider/AuthProvider";
+import { AuthContext, auth } from "../../Provider/AuthProvider";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AiFillEyeInvisible,  AiFillEye} from 'react-icons/ai'
+import { GithubAuthProvider, sendPasswordResetEmail, signInWithPopup } from "firebase/auth";
+
 
 
 const Login = () => {
@@ -14,10 +16,36 @@ const Login = () => {
     const [loginSuccess, setLoginSuccess] = useState('') ;
     const [showPassword, setShowPassword] = useState(false) ;
     
-    
+    const emailRef = useRef(null) ;
+    const handleForgetPassword = () =>{
+        
+        const email = emailRef.current.value ;
+
+        if(!email){
+            console.log('Please provide an email',emailRef.current.value)
+            return ;
+        } 
+        else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)){
+            console.log('Please write a valid email')
+            return ;
+        }
+
+
+        sendPasswordResetEmail(auth, email)
+        .then(() =>{
+          toast('please check your email') ;
+           
+        })
+        .catch(error =>{
+            console.log(error) ;
+        })
+    }
+
+
 
     const handleLogin = e =>{
 
+       
         setLoginSuccess('');
         setLoginError('');
         e.preventDefault();
@@ -35,6 +63,7 @@ const Login = () => {
      signIn(email, password)
      .then(result =>{
         console.log(result.user);
+       
         toast("User login successfully!")
      })
      .catch(error =>{
@@ -42,6 +71,19 @@ const Login = () => {
      }) ;
 
     } ;
+     
+    const githubProvider = new GithubAuthProvider() ;
+    const handleGithubLogin = () =>{
+       
+        signInWithPopup(auth, githubProvider)
+        .then(result =>{
+            console.log(result.user)
+        })
+        .catch(error =>{
+            console.error(error) ;
+        })
+
+    }
 
     return (
         <div className=" bg-base-200">
@@ -63,7 +105,7 @@ const Login = () => {
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" placeholder="email" name="email" className="input input-bordered" required />
+          <input type="email" placeholder="email" name="email" ref={emailRef}  className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
@@ -80,7 +122,7 @@ const Login = () => {
 
 
           <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+            <a href="#" onClick={handleForgetPassword} className="label-text-alt link link-hover">Forgot password?</a>
           </label>
         </div>
         <div className="form-control mt-6">
@@ -89,12 +131,21 @@ const Login = () => {
       </form>
     
 
+      {
+    loginError && <p className="ml-7 text-red-400 mb-3">{loginError}</p>
+    
+  }
+  {
+    loginSuccess && <p className="ml-7 text-green-700 mb-3">{loginSuccess}</p>
+  }
+
+
       <p className="ml-7 mb-4">Don't have an account? Please 
         <Link to='/register' className="text-blue-600 ml-2 font-bold"> Register</Link>
       </p>
      <div>
     
-     <Link><button  className="btn btn-primary mb-4 ml-7">Login with Github</button></Link>
+     <Link><button onClick={handleGithubLogin}  className="btn btn-primary mb-4 ml-7">Login with Github</button></Link>
      </div>
      <ToastContainer />
     </div>
