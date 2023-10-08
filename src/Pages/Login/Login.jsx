@@ -36,7 +36,7 @@ const Login = () => {
         sendPasswordResetEmail(auth, email)
         .then(() =>{
           toast('please check your email') ;
-           
+           setLoginSuccess()
         })
         .catch(error =>{
             console.log(error) ;
@@ -60,16 +60,17 @@ const Login = () => {
 
         if(password < 6 || !/[A-Z]/.test(password) || !/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)){
             toast('Password should be more than 6 charecters and one upper letter and a special cherecter')
+            return ;
         }
 
      signIn(email, password)
      .then(result =>{
-        console.log(result.user);
+       
        
         toast("User login successfully!")
      })
      .catch(error =>{
-        toast(error)
+      toast('Please register first')
      }) ;
 
     } ;
@@ -136,7 +137,7 @@ const Login = () => {
       {
     loginError && <p className="ml-7 text-red-400 mb-3">{loginError}</p>
     
-  }
+     }
   {
     loginSuccess && <p className="ml-7 text-green-700 mb-3">{loginSuccess}</p>
   }

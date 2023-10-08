@@ -33,14 +33,15 @@ const Register = () => {
 
         if(password < 6 || !/[A-Z]/.test(password) || !/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)){
             toast('Password should be more than 6 charecters and one upper letter and a special cherecter')
+            return ;
         }
 
         createUser(email, password)
         .then(result =>{
-            console.log(result.user)
+         toast('User created successfully');
            
-            toast("User registered successfully!")
-            sendEmailVerification(result.user)
+          
+            sendEmailVerification(email,password)
             .then(() =>{
                 toast('Please check your email and verify your account')
             })
@@ -49,7 +50,9 @@ const Register = () => {
 
         })
         .catch(error =>{
-            console.error(error)
+         
+       
+           toast('Please login now') ;
            
         })
      }
@@ -80,7 +83,7 @@ const Register = () => {
       <label className="label">
         <span className="label-text">Photo URL</span>
       </label>
-      <input type="text" placeholder="photo URL" name="photo" className="input input-bordered" required />
+      <input type="text" placeholder="photo URL" name="photo" className="input input-bordered"  />
     </div>
     <div className="form-control relative">
       <label className="label">
@@ -97,7 +100,7 @@ const Register = () => {
      
     </div>
     <div className="form-control mt-6">
-     <Link> <button className="btn btn-accent">Register</button></Link>
+      <button className="btn btn-accent">Register</button>
     </div>
   </form>
   {
