@@ -20,6 +20,7 @@ import PrivateRoute from './PrivateRoute';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import ContactUs from './Pages/ContactUs/ContactUs';
 import Error from './Error/Error';
+import Jobs from './Pages/Jobs/Jobs';
 
 
 
@@ -39,9 +40,14 @@ const router = createBrowserRouter([
         element:<PrivateRoute><AboutUs></AboutUs></PrivateRoute>,
         loader: () => fetch('/data.json')
       },
+      
       {
-        path:'contactUs',
+        path:'/contactUs',
         element: <ContactUs></ContactUs>
+      },
+      {
+        path:'/jobs',
+        element: <PrivateRoute><Jobs></Jobs></PrivateRoute>
       },
 
       {

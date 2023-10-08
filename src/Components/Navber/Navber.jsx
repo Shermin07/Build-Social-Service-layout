@@ -23,13 +23,16 @@ const Navber = () => {
     const navLinks = <>
 
 
-        <li className="ml-3 text-lg"> <NavLink to='/' className='text-gray-600 font-semibold '> Home </NavLink></li>
-        <li className="ml-3 text-lg"> <NavLink to='/aboutUs' className='text-gray-600  font-semibold '> About Us </NavLink></li>
+        <li className="ml-2 text-md"> <NavLink to='/' className='text-gray-600 font-semibold '> Home </NavLink></li>
+        <li className="ml-2 text-md"> <NavLink to='/aboutUs' className='text-gray-600  font-semibold '> About Us </NavLink></li>
 
-        <li className="ml-3 text-lg"> <NavLink to='/contactUs' className='text-gray-600  font-semibold '> Contacts </NavLink></li>
+        <li className="ml-2 text-md"> <NavLink to='/contactUs' className='text-gray-600  font-semibold '> Contacts </NavLink></li
+        >
+        <li className="ml-2 text-md"> <NavLink to='/jobs' className='text-gray-600  font-semibold '> Jobs </NavLink></li>
     
-        <li className="ml-3 text-lg"> <NavLink to='/login' className='text-gray-600  font-semibold'> Login </NavLink> </li>
-        <li className="ml-3 text-lg"> <NavLink to='/register' className='text-gray-600 font-semibold'> Register </NavLink> </li>
+        <li className="ml-2 text-md"> <NavLink to='/login' className='text-gray-600  font-semibold'> Login </NavLink> </li>
+
+        <li className="ml-2 text-md"> <NavLink to='/register' className='text-gray-600 font-semibold'> Register </NavLink> </li>
 
     </>
       

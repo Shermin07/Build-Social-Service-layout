@@ -18,10 +18,12 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: ? 
+A: {}
 
 <i>Write your explanation here</i>
 
+Because we declare a variable which name is greeting, and it has an empty object.
 </p>
 </details>
 
@@ -45,7 +47,12 @@ sum(1, "2");
 
 #### Answer: ?
 
+C: '12'
+
 <i>Write your explanation here</i>
+
+Because parameter a assigned the value as a number and parameter b assigned as a string.
+if we concate a num and a string then answer will be a string.
 
 </p>
 </details>
@@ -71,7 +78,11 @@ console.log(food);
 
 #### Answer: ?
 
+A :`['🍕', '🍫', '🥑', '🍔']`
+
 <i>Write your explanation here</i>
+
+info.favoriteFood property does not affect the original food array. when we do console.log(food), it will still remain the original array with the values "🍕", "🍫", "🥑", "🍔".
 
 </p>
 </details>
@@ -96,7 +107,11 @@ console.log(sayHi());
 
 #### Answer: ?
 
+B: `Hi there, undefined`
+
 <i>Write your explanation here</i>
+
+we have a function named sayHi, it takes one  parameter but when we call this function we do not put any arguments.That is why answer is undefined.
 
 </p>
 </details>
@@ -124,7 +139,11 @@ console.log(count);
 
 #### Answer: ?
 
+C: 3
+
 <i>Write your explanation here</i>
+
+when we log count using console.log(count), the output will be 3 because there are three truthy elements (1, 2, and 3) in the nums array.
 
 </p>
 </details>
