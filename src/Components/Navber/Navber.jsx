@@ -7,6 +7,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 const Navber = () => {
 
    const {user,logOut} = useContext(AuthContext) ;
+   console.log(user)
 
    const handleSignOut = () =>{
     logOut()
@@ -63,10 +64,14 @@ const Navber = () => {
     </ul>
   </div>
   <div className="navbar-end">
+ 
   <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+    
         <div className="w-10 rounded-full">
           <img  src="https://png.pngtree.com/png-vector/20190329/ourmid/pngtree-vector-avatar-icon-png-image_889567.jpg" />
+         
         </div>
+       
       </label>
    {
     user?
