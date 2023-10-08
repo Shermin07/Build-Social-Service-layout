@@ -1,3 +1,4 @@
+import Footer from "../../Components/Footer/Footer";
 
 
 const AboutUs = () => {
@@ -98,9 +99,9 @@ Adds customized decor, a diploma presentation ceremony, and a photo booth.  </p>
 
         </div>
 
-        <p className="mt-10 border-2 mx-36 px-9 mb-5 py-3 rounded-md bg-slate-700 text-white">Each service offers multiple packages to suit different preferences and budgetary constraints. Customers can choose the package that best aligns with their vision and requirements for their special celebration.</p>
+        <p className="mt-10 w-[370px] xl:w-[820px] md:w-[600px] lg:w-[760px] border-2 xl:ml-52 lg:ml-32 md:ml-20 ml-7 px-9 mb-5 py-3 rounded-md bg-slate-700 text-white">Each service offers multiple packages to suit different preferences and budgetary constraints. Customers can choose the package that best aligns with their vision and requirements for their special celebration.</p>
 
-        <p className="boeder-2 mx-36 mb-5 px-9  py-3 rounded-md bg-slate-700 text-white">
+        <p className="boeder-2 w-[370px] xl:w-[820px] md:w-[600px] lg:w-[760px] border-2 xl:ml-52 lg:ml-32 md:ml-20 ml-7  mb-5 px-9  py-3 rounded-md bg-slate-700 text-white">
         <span className="text-center font-bold ">Additional Facilities:</span><br></br>
         <br></br>
 
@@ -115,6 +116,7 @@ Optional extras like transportation, accommodations, and additional entertainmen
 <br></br>
 5. These services aim to provide a comprehensive and tailored experience for customers, ensuring that their special events are not only memorable but also stress-free and within their budget.
         </p>
+        <Footer></Footer>
        </div>
     );
 };

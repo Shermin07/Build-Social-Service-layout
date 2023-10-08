@@ -27,7 +27,7 @@ const ContactUs = () => {
   <div className="hero-content  flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
      
-    <img className="h-[400px] ml-12" src="https://www.successmantra.in/assets/assestsnew/images/contact-us.png"></img>
+    <img className="h-[300px] md:h-[400px]  md:ml-12" src="https://www.successmantra.in/assets/assestsnew/images/contact-us.png"></img>
     </div>
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <form onSubmit={handleContact} className="card-body">

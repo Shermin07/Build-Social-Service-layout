@@ -5,11 +5,11 @@ const Reviews = () => {
         <div className="mt-8">
             <h1 className="text-center font-bold text-3xl text-rose-500">Customer Reviews</h1>
             <p className="font-semibold text-center mt-2"> Celebrating Unforgettable Moments with [EventFusion]</p>
-          <div className="flex mt-11 mb-12">
-            <div className="w-[700px] ml-10">
+          <div className="flex-wrap lg:flex xl:flex mt-11 mb-12">
+            <div className="w-[350px] md:w-[670px] lg:w-[500px] xl:w-[700px] ml-10">
             <p>Customer reviews speak volumes about [EventFusion]'s exceptional event planning services. Our clients have consistently praised the attention to detail, creative decor, and seamless execution of events. Whether it's a wedding, birthday, anniversary, retirement, baby shower, or graduation, our team's dedication shines through. We take pride in crafting memorable moments that leave a lasting impact. With a focus on personalization and customer satisfaction, we have earned the trust of countless happy clients. Their glowing reviews reflect the commitment we have to turning dreams into reality. At [EventFusion], we continue to be inspired by the joy and appreciation our clients share in their reviews.</p>
             </div>
-            <div className="ml-8">
+            <div className="ml-5 md:ml-44 lg:ml-8">
             <div className="carousel rounded-box h-[230px]  w-96">
   <div className="carousel-item ">
   <div className="card shadow-xl image-full">

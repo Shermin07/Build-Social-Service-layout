@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { AiFillEyeInvisible,  AiFillEye} from 'react-icons/ai'
 import { sendEmailVerification } from "firebase/auth";
+import Footer from "../../Components/Footer/Footer";
 
 const Register = () => {
 
@@ -61,8 +62,8 @@ const Register = () => {
 <div className="text-center lg:text-left">
  
 </div>
-<div className="card w-[350px] md:[550px] lg:w-[700px] bg-teal-50  flex-shrink-0   shadow-2xl ">
-  <form onSubmit={handleRegister} className="card-body  w-[300px] md:[400px] lg:w-[500px]">
+<div className="card w-[350px]  md:w-[700px] bg-teal-50  flex-shrink-0   shadow-2xl ">
+  <form onSubmit={handleRegister} className="card-body  w-[300px]  md:w-[500px]">
     <div className="form-control">
       <label className="label">
         <span className="label-text">Name</span>
@@ -87,7 +88,7 @@ const Register = () => {
       </label>
       <input  type={showPassword ? 'text' :'password'} placeholder="password" name="password" className="input input-bordered " required />
 
-      <span className="absolute  mt-[51px] ml-[410px]" onClick={ () => setShowPassword(!showPassword)}>
+      <span className="absolute  mt-[51px] ml-[210px] md:ml-[410px]" onClick={ () => setShowPassword(!showPassword)}>
       {
        showPassword?<AiFillEye></AiFillEye> : <AiFillEyeInvisible></AiFillEyeInvisible>  } 
       </span>
@@ -115,6 +116,7 @@ const Register = () => {
 </div>
 </div>
 </div>
+<Footer></Footer>
     </div>
     );
 };

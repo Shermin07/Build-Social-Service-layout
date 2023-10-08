@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AiFillEyeInvisible,  AiFillEye} from 'react-icons/ai'
 import { GithubAuthProvider, sendPasswordResetEmail, signInWithPopup } from "firebase/auth";
+import Footer from "../../Components/Footer/Footer";
 
 
 
@@ -94,8 +95,8 @@ const Login = () => {
     <div className="text-center lg:text-left">
      
     </div>
-    <div className="card w-[350px] md:[550px] lg:w-[700px] flex-shrink-0   shadow-2xl bg-sky-100">
-      <form onSubmit={handleLogin} className="card-body w-[300px] md:[400px] lg:w-[500px]">
+    <div className="card w-[350px] md:w-[700px] flex-shrink-0   shadow-2xl bg-sky-100">
+      <form onSubmit={handleLogin} className="card-body w-[300px]  md:w-[500px]">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Name</span>
@@ -114,7 +115,7 @@ const Login = () => {
           </label>
           <input  type={showPassword ? 'text' :'password'} placeholder="password" name="password" className="input input-bordered " required />
 
-      <span className="absolute  mt-[51px] ml-[410px]" onClick={ () => setShowPassword(!showPassword)}>
+      <span className="absolute mt-[51px] ml-[210px] md:mt-[51px] md:ml-[410px]" onClick={ () => setShowPassword(!showPassword)}>
       {
        showPassword?<AiFillEye></AiFillEye> : <AiFillEyeInvisible></AiFillEyeInvisible>  } 
       </span>
@@ -155,6 +156,7 @@ const Login = () => {
   </div>
  
 </div>
+<Footer></Footer>
         </div>
     );
 };

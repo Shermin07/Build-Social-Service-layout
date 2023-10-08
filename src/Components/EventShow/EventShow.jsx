@@ -8,9 +8,9 @@ const EventShow = () => {
             Stunning Event Decorations
                  </h1>
                  <p className="text-center font-semibold mt-3">Witness the Magic of Our Spectacular Decorations</p>
-           <div className="mt-9 ml-3 md:ml-20 lg:ml-56 mx-auto">
+           <div className="mt-9 ml-3 md:ml-20 lg:ml-28 xl:ml-36 mx-auto">
 
-           <div className="carousel w-[400px] h-[160px] md:w-[620px] md:h-[200px] lg:w-[800px] lg:h-[400px]">
+           <div className="carousel w-[400px] h-[160px] md:w-[620px] md:h-[200px] lg:w-[800px] lg:h-[400px] xl:w-[1000px]">
   <div id="slide1" className="carousel-item relative w-full">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSi4VKk3NMbmWvNKU9TrG0iIqFv_VkVsT3RhPFP6BwIdKEiyU5FC_R6iCcaM_E2Mh-3Sg&usqp=CAU" className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
