@@ -49,3 +49,21 @@ createUserWithEmailAndPassword(auth, email, password)
   .catch((error) => {
     // Handle errors
   });
+
+
+** AOS (Animate On Scroll) Integration **
+
+* Introduction *
+[AOS (Animate On Scroll)](https://github.com/michalsnik/aos) is a JavaScript library that enables smooth animations for elements as they scroll into the viewport. With AOS, you can add engaging animations to your website or web application, making your content more visually appealing.
+
+This section provides a guide on how to integrate and utilize AOS in your project.
+
+## Getting Started
+
+### Installation
+You can integrate AOS into your project in two ways:
+
+#### 1. Using npm (Node Package Manager)
+Install AOS as a package dependency:
+```bash
+npm install aos
