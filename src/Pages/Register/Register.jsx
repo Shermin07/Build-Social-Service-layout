@@ -53,9 +53,9 @@ const Register = () => {
      }
 
     return (
-        <div className=" bg-base-200">
+        <div className=" bg-gray-200">
         <h1 className="text-3xl  mt-5 font-bold text-center">Please Register </h1>
-      <div className="hero  bg-base-200">
+      <div className="hero  ">
 <div className="hero-content">
 <div className="text-center lg:text-left">
  

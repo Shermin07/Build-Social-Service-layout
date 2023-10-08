@@ -4,7 +4,7 @@ const Header = () => {
 
 
     return (
-        <div>
+        <div className="">
 
            <div className="hero min-h-screen" style={{backgroundImage: 'url(https://www.gohawaii.com/sites/default/files/hero-unit-images/MH_01065-Annual%20Events%20and%20Festivals.jpg)'}}>
   <div className="hero-overlay bg-opacity-60"></div>

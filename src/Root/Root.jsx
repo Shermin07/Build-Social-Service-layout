@@ -6,7 +6,7 @@ import Navber from "../Components/Navber/Navber";
 const Root = () => {
     return (
         <div className="max-w-screen-xl mx-auto">
-            <Navber></Navber>
+            <Navber className=""></Navber>
             <Outlet></Outlet>
            
         </div>

@@ -23,11 +23,11 @@ const Navber = () => {
     const navLinks = <>
 
 
-        <li className="ml-3 text-lg"> <NavLink to='/' className='text-blue-700 font-semibold '> Home </NavLink></li>
-        <li className="ml-3 text-lg"> <NavLink to='/aboutUs' className='text-blue-700 font-semibold '> About Us </NavLink></li>
+        <li className="ml-3 text-lg"> <NavLink to='/' className='text-gray-600 font-semibold '> Home </NavLink></li>
+        <li className="ml-3 text-lg"> <NavLink to='/aboutUs' className='text-gray-600  font-semibold '> About Us </NavLink></li>
     
-        <li className="ml-3 text-lg"> <NavLink to='/login' className='text-blue-700 font-semibold'> Login </NavLink> </li>
-        <li className="ml-3 text-lg"> <NavLink to='/register' className='text-blue-700 font-semibold'> Register </NavLink> </li>
+        <li className="ml-3 text-lg"> <NavLink to='/login' className='text-gray-600  font-semibold'> Login </NavLink> </li>
+        <li className="ml-3 text-lg"> <NavLink to='/register' className='text-gray-600 font-semibold'> Register </NavLink> </li>
 
     </>
       
@@ -35,8 +35,8 @@ const Navber = () => {
 
 
     return (
-        <div className="max-w-screen-xl mx-auto">
-         <div className="navbar bg-base-100">
+        <div className="max-w-screen-xl mx-auto bg-gray-200  ">
+         <div className="navbar">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -48,7 +48,7 @@ const Navber = () => {
 
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl text-blue-700 font-bold">Events Managements</a>
+    <a className="btn btn-ghost normal-case text-xl text-gray-600font-bold">𝓔𝓿𝓮𝓷𝓽𝓕𝓾𝓼𝓲𝓸𝓷</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -65,7 +65,7 @@ const Navber = () => {
       </label>
    {
     user?
-    <button onClick={handleSignOut} className="btn btn-primary">Sign Out</button>
+    <button onClick={handleSignOut} className="btn text-white bg-gray-600">Sign Out</button>
     :
     <Link to='/login'>
    <button className="btn btn-primary">Login</button>

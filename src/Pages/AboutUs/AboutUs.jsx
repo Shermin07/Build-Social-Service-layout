@@ -5,7 +5,7 @@ const AboutUs = () => {
 
 
     return (
-       <div>
+       <div className="bg-gray-200">
 
         <h1 className="mt-7 text-xl font-bold text-center mb-8">Discover Our Exclusive<br></br> Celebration Packages</h1>
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:mx-9  gap-4 md:gap-3  lg:gap-4">
@@ -101,14 +101,19 @@ Adds customized decor, a diploma presentation ceremony, and a photo booth.  </p>
         <p className="mt-10 border-2 mx-36 px-9 mb-5 py-3 rounded-md bg-slate-700 text-white">Each service offers multiple packages to suit different preferences and budgetary constraints. Customers can choose the package that best aligns with their vision and requirements for their special celebration.</p>
 
         <p className="boeder-2 mx-36 mb-5 px-9  py-3 rounded-md bg-slate-700 text-white">
-        <span className="text-center font-bold">Additional Facilities:</span><br></br>
+        <span className="text-center font-bold ">Additional Facilities:</span><br></br>
+        <br></br>
 
- 1.All services include event coordination and a dedicated event planner.<br></br>
-2.Professional photography and videography services are available for capturing precious moments.<br></br>
-3.Catering options range from gourmet cuisine to customized menus to suit various dietary preferences.<br></br>
-4.We offer customizable packages to meet specific budget and theme requirements.
+ 1. All services include event coordination and a dedicated event planner.<br></br>
+ <br></br>
+2. Professional photography and videography services are available for capturing precious moments.<br></br>
+<br></br>
+3. Catering options range from gourmet cuisine to customized menus to suit various dietary preferences.<br></br>
+<br></br>
+4. We offer customizable packages to meet specific budget and theme requirements.
 Optional extras like transportation, accommodations, and additional entertainment can be arranged upon request.<br></br>
-5.These services aim to provide a comprehensive and tailored experience for customers, ensuring that their special events are not only memorable but also stress-free and within their budget.
+<br></br>
+5. These services aim to provide a comprehensive and tailored experience for customers, ensuring that their special events are not only memorable but also stress-free and within their budget.
         </p>
        </div>
     );
