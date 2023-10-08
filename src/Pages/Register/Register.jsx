@@ -38,7 +38,7 @@ const Register = () => {
 
         createUser(email, password)
         .then(result =>{
-         toast('Your registration successfully done');
+         toast('Your registration successfully done now please login');
            
           
             sendEmailVerification(email,password)
