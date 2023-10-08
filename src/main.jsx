@@ -19,6 +19,8 @@ import PrivateRoute from './PrivateRoute';
 
 import AboutUs from './Pages/AboutUs/AboutUs';
 import ContactUs from './Pages/ContactUs/ContactUs';
+import Error from './Error/Error';
+
 
 
 
@@ -56,6 +58,10 @@ const router = createBrowserRouter([
       {
         path:'/register',
         element:<Register></Register>
+      },
+      {
+        path:'*',
+        element:<Error></Error>
       }
     ]
   },
