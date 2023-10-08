@@ -38,7 +38,7 @@ const Register = () => {
 
         createUser(email, password)
         .then(result =>{
-         toast('User created successfully');
+         toast('Your registration successfully done');
            
           
             sendEmailVerification(email,password)
@@ -52,7 +52,7 @@ const Register = () => {
         .catch(error =>{
          
        
-           toast('Please login now') ;
+           toast('Already have an account, please login now') ;
            
         })
      }
@@ -100,7 +100,7 @@ const Register = () => {
      
     </div>
     <div className="form-control mt-6">
-      <button className="btn btn-accent">Register</button>
+      <button className="btn text-white btn-accent">Register</button>
     </div>
   </form>
   {

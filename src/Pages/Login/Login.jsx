@@ -67,7 +67,7 @@ const Login = () => {
      .then(result =>{
        
        
-        toast("User login successfully!")
+        toast("Your login successfully done!")
      })
      .catch(error =>{
       toast('Please register first')
@@ -144,7 +144,7 @@ const Login = () => {
 
 
       <p className="ml-7 mb-4">Don't have an account? Please 
-        <Link to='/register' className="text-sky-500  ml-2 font-bold"> Register</Link>
+        <Link to='/register' className="text-sky-500   ml-2 font-bold"> Register</Link>
       </p>
      <div>
     
