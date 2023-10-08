@@ -67,7 +67,7 @@ const Login = () => {
      .then(result =>{
        
        
-        toast("Your login successfully done!")
+        toast("Your login successfully done! now you can visit our website")
      })
      .catch(error =>{
       toast('Please register first')
