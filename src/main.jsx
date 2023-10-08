@@ -18,6 +18,7 @@ import ServiceDetails from './Pages/ServiceDetails/ServiceDetails';
 import PrivateRoute from './PrivateRoute';
 
 import AboutUs from './Pages/AboutUs/AboutUs';
+import ContactUs from './Pages/ContactUs/ContactUs';
 
 
 
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
         path:'/aboutUs',
         element:<AboutUs></AboutUs>,
         loader: () => fetch('/data.json')
+      },
+      {
+        path:'contactUs',
+        element: <ContactUs></ContactUs>
       },
 
       {

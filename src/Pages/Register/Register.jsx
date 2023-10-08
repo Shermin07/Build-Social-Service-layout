@@ -25,9 +25,10 @@ const Register = () => {
         e.preventDefault();
         const  name = e.target.name.value ;
         const email = e.target.email.value ;
+        const photo = e.target.photo.value ;
         const password = e.target.password.value ;
 
-        console.log(name, email, password)
+        console.log(name, email, password,photo)
 
         if(password < 6 || !/[A-Z]/.test(password) || !/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)){
             toast('Password should be more than 6 charecters and one upper letter and a special cherecter')
@@ -53,15 +54,15 @@ const Register = () => {
      }
 
     return (
-        <div className=" bg-gray-200">
-        <h1 className="text-3xl  mt-5 font-bold text-center">Please Register </h1>
+        <div className=" bg-gray-50">
+        <h1 className="text-3xl text-teal-500 mt-5 font-bold text-center">Please Register </h1>
       <div className="hero  ">
 <div className="hero-content">
 <div className="text-center lg:text-left">
  
 </div>
-<div className="card w-[350px] md:[550px] lg:w-[700px] flex-shrink-0   shadow-2xl bg-base-100">
-  <form onSubmit={handleRegister} className="card-body w-[300px] md:[400px] lg:w-[500px]">
+<div className="card w-[350px] md:[550px] lg:w-[700px] bg-teal-50  flex-shrink-0   shadow-2xl ">
+  <form onSubmit={handleRegister} className="card-body  w-[300px] md:[400px] lg:w-[500px]">
     <div className="form-control">
       <label className="label">
         <span className="label-text">Name</span>
@@ -73,6 +74,12 @@ const Register = () => {
         <span className="label-text">Email</span>
       </label>
       <input type="email" placeholder="email" name="email" className="input input-bordered" required />
+    </div>
+    <div className="form-control">
+      <label className="label">
+        <span className="label-text">Photo URL</span>
+      </label>
+      <input type="text" placeholder="photo URL" name="photo" className="input input-bordered" required />
     </div>
     <div className="form-control relative">
       <label className="label">
@@ -89,7 +96,7 @@ const Register = () => {
      
     </div>
     <div className="form-control mt-6">
-      <button className="btn btn-accent">Register</button>
+     <Link> <button className="btn btn-accent">Register</button></Link>
     </div>
   </form>
   {

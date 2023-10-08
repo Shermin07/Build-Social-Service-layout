@@ -16,6 +16,7 @@ const ServiceDetailsShow = ({details}) => {
     <div>
       <h1 className="text-4xl font-bold">{title}</h1>
       <p className="py-6">{description_details}</p>
+      <p className="mb-2 font-semibold">Event Expense: {price}</p>
       <Link   to='/'><button className="btn bg-sky-600 text-white">Go Home</button></Link>
     </div>
   </div>

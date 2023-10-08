@@ -25,6 +25,8 @@ const Navber = () => {
 
         <li className="ml-3 text-lg"> <NavLink to='/' className='text-gray-600 font-semibold '> Home </NavLink></li>
         <li className="ml-3 text-lg"> <NavLink to='/aboutUs' className='text-gray-600  font-semibold '> About Us </NavLink></li>
+
+        <li className="ml-3 text-lg"> <NavLink to='/contactUs' className='text-gray-600  font-semibold '> Contacts </NavLink></li>
     
         <li className="ml-3 text-lg"> <NavLink to='/login' className='text-gray-600  font-semibold'> Login </NavLink> </li>
         <li className="ml-3 text-lg"> <NavLink to='/register' className='text-gray-600 font-semibold'> Register </NavLink> </li>
@@ -60,7 +62,7 @@ const Navber = () => {
   <div className="navbar-end">
   <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img src="" />
+          <img  src="https://png.pngtree.com/png-vector/20190329/ourmid/pngtree-vector-avatar-icon-png-image_889567.jpg" />
         </div>
       </label>
    {

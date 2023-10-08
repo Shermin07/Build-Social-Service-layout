@@ -17,6 +17,7 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false) ;
     
     const emailRef = useRef(null) ;
+
     const handleForgetPassword = () =>{
         
         const email = emailRef.current.value ;
@@ -86,14 +87,14 @@ const Login = () => {
     }
 
     return (
-        <div className=" bg-gray-200">
-            <h1 className="text-3xl  mt-5 font-bold text-center">Login Your Account </h1>
+        <div className=" bg-gray-50">
+            <h1 className="text-3xl text-sky-500  mt-5 font-bold text-center">Login Your Account </h1>
           <div className="hero">
   <div className="hero-content">
     <div className="text-center lg:text-left">
      
     </div>
-    <div className="card w-[350px] md:[550px] lg:w-[700px] flex-shrink-0   shadow-2xl bg-base-100">
+    <div className="card w-[350px] md:[550px] lg:w-[700px] flex-shrink-0   shadow-2xl bg-sky-100">
       <form onSubmit={handleLogin} className="card-body w-[300px] md:[400px] lg:w-[500px]">
         <div className="form-control">
           <label className="label">
@@ -126,7 +127,7 @@ const Login = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn bg-sky-500 text-white">Login</button>
         </div>
       </form>
     
@@ -141,11 +142,11 @@ const Login = () => {
 
 
       <p className="ml-7 mb-4">Don't have an account? Please 
-        <Link to='/register' className="text-blue-600 ml-2 font-bold"> Register</Link>
+        <Link to='/register' className="text-sky-500  ml-2 font-bold"> Register</Link>
       </p>
      <div>
     
-     <Link><button onClick={handleGithubLogin}  className="btn btn-primary mb-4 ml-7">Login with Github</button></Link>
+     <Link><button onClick={handleGithubLogin}  className="btn bg-sky-500 text-white mb-4 ml-7">Login with Github</button></Link>
      </div>
      <ToastContainer />
     </div>

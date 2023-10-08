@@ -14,7 +14,7 @@ const {id, image, title, title_color, price, price_color, description  } = servi
   <div className="card-body">
     <h2 style={{color: title_color}} className="card-title">{title}</h2>
     <p >{description}</p>
-    <p style={{color: price_color}}>{price}</p>
+    <p className="font-semibold" style={{color: price_color}}>Event Expense:  {price}</p>
     <div className="card-actions ">
     <Link to = {`/serviceA/${id}`}>  <button  className="btn text-white" style={{background: price_color}}>See Details</button></Link>
     </div>
