@@ -88,7 +88,7 @@ const Login = () => {
 
     return (
         <div className=" bg-gray-50">
-            <h1 className="text-3xl text-sky-500  mt-5 font-bold text-center">Login Your Account </h1>
+            <h1 className="text-3xl text-sky-500  pt-4 pb-4 font-bold text-center">Login Your Account </h1>
           <div className="hero">
   <div className="hero-content">
     <div className="text-center lg:text-left">

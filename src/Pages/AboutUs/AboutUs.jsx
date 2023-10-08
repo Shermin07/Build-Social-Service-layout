@@ -7,7 +7,7 @@ const AboutUs = () => {
     return (
        <div className="bg-gray-200">
 
-        <h1 className="mt-7 text-xl font-bold text-center mb-8">Discover Our Exclusive<br></br> Celebration Packages</h1>
+        <h1 className=" text-2xl font-bold text-center pt-9 mb-8">Discover Our Exclusive<br></br> Celebration Packages</h1>
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:mx-9  gap-4 md:gap-3  lg:gap-4">
             <div className="card bg-base-100 shadow-xl image-full">
   <figure><img src="https://media.istockphoto.com/id/1190043570/photo/happy-wedding-photography-of-bride-and-groom-at-wedding-ceremony-wedding-tradition-sprinkled.jpg?s=612x612&w=0&k=20&c=_aCIW5-iOIiaDdqin_50kvBcbFbIxSULHHamPUILE0c=" alt="packake" /></figure>

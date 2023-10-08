@@ -76,7 +76,7 @@ const Navber = () => {
   </div>
 </div>
 
-   <Marquee pauseOnHover = {true} speed={60} className="mb-3">Celebrating life's moments, one event at a time.Where memories are made, laughter is shared, and joy finds its place.</Marquee>
+   <Marquee pauseOnHover = {true} speed={60} className="pb-3 pt-3">Celebrating life's moments, one event at a time.Where memories are made, laughter is shared, and joy finds its place.</Marquee>
         </div>
     );
 };
