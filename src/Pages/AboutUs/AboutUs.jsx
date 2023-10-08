@@ -9,8 +9,11 @@ const AboutUs = () => {
        <div className="bg-gray-200">
 
         <h1 className=" text-2xl font-bold text-center pt-9 mb-8">Discover Our Exclusive<br></br> Celebration Packages</h1>
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:mx-9  gap-4 md:gap-3  lg:gap-4">
-            <div className="card bg-base-100 shadow-xl image-full">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:mx-9  gap-4 md:gap-3  lg:gap-4" >
+
+            <div className="card bg-base-100 shadow-xl image-full" data-aos="fade-right"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
   <figure><img src="https://media.istockphoto.com/id/1190043570/photo/happy-wedding-photography-of-bride-and-groom-at-wedding-ceremony-wedding-tradition-sprinkled.jpg?s=612x612&w=0&k=20&c=_aCIW5-iOIiaDdqin_50kvBcbFbIxSULHHamPUILE0c=" alt="packake" /></figure>
   <div className="card-body">
     <h2 className="card-title font-bold text-xl">Elegant Wedding Celebration:</h2>
@@ -24,7 +27,8 @@ Adds premium decor, professional photography, live entertainment, and a customiz
     </div>
   </div>
 </div>
-            <div className="card  bg-base-100 shadow-xl image-full">
+
+            <div className="card  bg-base-100 shadow-xl image-full" >
   <figure><img src="https://m.media-amazon.com/images/I/81DXhu6ONML.jpg" /></figure>
   <div className="card-body">
     <h2 className="card-title font-bold text-xl mt-9">Fun Birthday Bash:</h2>
@@ -38,7 +42,10 @@ Includes basic decorations, entertainment, and a standard cake.<br></br>
   </div>
 </div>
 
-            <div className="card  bg-base-100 shadow-xl image-full">
+
+            <div className="card  bg-base-100 shadow-xl image-full" data-aos="fade-left"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
   <figure><img src="https://rukminim2.flixcart.com/image/850/1000/kk5rgy80/balloon/7/a/m/38-happy-anniversary-party-decorations-combo-set-with-banner-original-imafzkfq9qbwgyam.jpeg?q=90" /></figure>
   <div className="card-body">
     <h2 className="card-title font-bold text-xl mt-9">Silver Anniversary Celebration:</h2>
@@ -52,7 +59,10 @@ Adds personalized vows renewal ceremony, professional photography, and a luxury 
     </div>
   </div>
 </div>
-            <div className="card  bg-base-100 shadow-xl image-full">
+
+            <div className="card  bg-base-100 shadow-xl image-full" data-aos="fade-right"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
   <figure><img src="https://m.media-amazon.com/images/I/81qrqaFW6RL.jpg" /></figure>
   <div className="card-body">
     <h2 className="card-title font-bold text-xl mt-9">Retirement Roast and Toast:</h2>
@@ -66,6 +76,7 @@ Adds retirement-themed decor, a farewell gift, and a professional photographer.<
     </div>
   </div>
 </div>
+
 
             <div className="card  bg-base-100 shadow-xl image-full">
   <figure><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRygWKyyu5LQMce44hge3ax9zhCCq-Hslff8A&usqp=CAU" /></figure>
@@ -81,7 +92,10 @@ Adds personalized party favors, a gender reveal activity, and professional event
     </div>
   </div>
 </div>
-            <div className="card  bg-base-100 shadow-xl image-full">
+
+            <div className="card  bg-base-100 shadow-xl image-full" data-aos="fade-left"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
   <figure><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEgo9tI-2Sk2-eC0YlnWvYhtmPLB8NJnaTTisHkb-qe07x7I_1MEvOIV4Ddh-whWOo-mo&usqp=CAU" /></figure>
   <div className="card-body">
     <h2 className="card-title font-bold text-xl mt-9">Graduation Celebration:</h2>
