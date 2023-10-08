@@ -24,16 +24,16 @@ const Navber = () => {
     const navLinks = <>
 
 
-        <li className="ml-2 text-md"> <NavLink to='/' className='text-gray-600 font-semibold '> Home </NavLink></li>
-        <li className="ml-2 text-md"> <NavLink to='/aboutUs' className='text-gray-600  font-semibold '> About Us </NavLink></li>
+        <li className="ml-1 text-md"> <NavLink to='/' className='text-gray-600 font-semibold '> Home </NavLink></li>
+        <li className="ml-1 text-md"> <NavLink to='/aboutUs' className='text-gray-600  font-semibold '> About Us </NavLink></li>
 
-        <li className="ml-2 text-md"> <NavLink to='/contactUs' className='text-gray-600  font-semibold '> Contacts </NavLink></li
+        <li className="ml-1 text-md"> <NavLink to='/contactUs' className='text-gray-600  font-semibold '> Contacts </NavLink></li
         >
-        <li className="ml-2 text-md"> <NavLink to='/jobs' className='text-gray-600  font-semibold '> Jobs </NavLink></li>
+        <li className="ml-1 text-md"> <NavLink to='/jobs' className='text-gray-600  font-semibold '> Jobs </NavLink></li>
     
-        <li className="ml-2 text-md"> <NavLink to='/login' className='text-gray-600  font-semibold'> Login </NavLink> </li>
+        <li className="ml-1 text-md"> <NavLink to='/login' className='text-gray-600  font-semibold'> Login </NavLink> </li>
 
-        <li className="ml-2 text-md"> <NavLink to='/register' className='text-gray-600 font-semibold'> Register </NavLink> </li>
+        <li className="ml-1 text-md"> <NavLink to='/register' className='text-gray-600 font-semibold'> Register </NavLink> </li>
 
     </>
       
@@ -41,8 +41,10 @@ const Navber = () => {
 
 
     return (
-        <div className="max-w-screen-xl mx-auto bg-gray-200  ">
+        <div className="max-w-screen-xl mx-auto pt-5 bg-gray-200 relative  ">
+        <p className="absolute top-1 right-2">{user?.email}</p>
          <div className="navbar">
+         
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -63,8 +65,9 @@ const Navber = () => {
     
     </ul>
   </div>
+  
   <div className="navbar-end">
- 
+  
   <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
     
         <div className="w-10 rounded-full">
@@ -73,6 +76,7 @@ const Navber = () => {
         </div>
        
       </label>
+      
    {
     user?
     <button onClick={handleSignOut} className="btn text-white bg-gray-600">Sign Out</button>
@@ -82,6 +86,7 @@ const Navber = () => {
     </Link>
    }
   </div>
+  
 </div>
 
    <Marquee pauseOnHover = {true} speed={60} className="pb-3 pt-3">Celebrating life's moments, one event at a time.Where memories are made, laughter is shared, and joy finds its place.</Marquee>
